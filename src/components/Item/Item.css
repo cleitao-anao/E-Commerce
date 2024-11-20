@@ -1,0 +1,26 @@
+/* mexe no formato do card */
+.item {
+    width: 350px;
+
+}
+
+.item p{
+     margin: 6px 0px;
+}
+
+.item-prices{
+   
+    gap: 20px;
+}
+
+.item-prices-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.item:hover{
+    transform: scale(0.95);
+    border: 1px solid red 
+}

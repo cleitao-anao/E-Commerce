@@ -1,0 +1,14 @@
+/* mexe na localização do card */
+
+.center{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.popular-item{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap:30px;
+}
