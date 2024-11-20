@@ -6,7 +6,6 @@ import Register from './components/Register';
 import Configuracao from './components/Configuracao';
 import MetodosPagamento from './components/MetodosPagamento';
 import Carrinho from './components/Carrinho';
-
 import './assets/css/styles.css';
 
 function App() {
