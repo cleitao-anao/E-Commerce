@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'; // Importe o Link do React Router
 import perfilIcon from '../icons/perfil.png'; // Ajuste o caminho conforme necessário
 import carrinhoIcon from '../icons/carrinhos-de-compras.png'; // Ajuste o caminho conforme necessário
 import Popular from './Popular/Popular';
+
 import { useStore } from '../store'; // Certifique-se de ajustar o caminho
+import Mulher from './Popular/Mulher';
+
 
 function Home({ isAuthenticated }) {
   const totalItems = useStore((state) => state.totalItems());
@@ -52,6 +55,7 @@ function Home({ isAuthenticated }) {
         <p>Explore nossos produtos e encontre o que você precisa.</p>
       </main>
       <Popular />
+      <Mulher/>
     </div>
   );
 }

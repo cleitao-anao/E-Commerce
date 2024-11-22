@@ -1,17 +1,17 @@
 import React from 'react'
 import './Popular.css'
-import data_product from'../../assets/js/data'
+import all_product from'../../assets/js/all_product'
 import  Item  from "../Item/Item";
 
-const popular = () => {
+const Mulher = () => {
   return (
-    <div className='popular'>
+    <div className='Mulher'>
       <h1>popular para mulheres</h1>
       <hr />
 
         <div className='center'>
           <div className='popular-item'>
-            {data_product.map((item,i)=>{
+            {all_product.map((item,i)=>{
                 return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
           
             })}
@@ -22,4 +22,4 @@ const popular = () => {
   )
 }
 
-export default popular;
+export default Mulher;
