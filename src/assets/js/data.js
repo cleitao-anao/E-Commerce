@@ -24,12 +24,6 @@ let data_product = [
     new_price:100.00,
     
   },
-  {id:4,
-    name:"coiso 4",
-    image:'https://placehold.co/350x418',
-    new_price:100.00,
-    
-  },
 ];
 
 export default data_product;
