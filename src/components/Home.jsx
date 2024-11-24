@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStore } from '../store'; // Certifique-se de ajustar o caminho
-// import Headset from './Popular/Headset';
-// import Mouse from './Popular/Mouse';
-// import Teclados from './Popular/Teclados';
+import Headset from './Popular/Headset';
+import Mouse from './Popular/Mouse';
+import Teclados from './Popular/Teclados';
 
 
 function Home({ isAuthenticated }) {
@@ -39,9 +39,9 @@ function Home({ isAuthenticated }) {
           ))}
         </div>
       </div>
-          {/* <Headset/> */}
-          {/* <Mouse/> */}
-          {/* <Teclados/> */}
+          <Headset/>
+          <Mouse/>
+          <Teclados/>
  
     </div>
   );
