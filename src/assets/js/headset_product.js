@@ -5,7 +5,7 @@ let headset_product = [
       id:1,
       name:"headset redragon zeus x wireless",
       image:headset_1,
-      new_price:50.00,
+      new_price:400.00,
     
     },
   ];
