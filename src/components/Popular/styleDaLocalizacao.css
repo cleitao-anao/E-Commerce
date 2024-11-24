@@ -1,0 +1,43 @@
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.popular-item {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    width: 100%;
+}
+
+.item {
+    width: 30%; 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+}
+
+.item img {
+    width: 100%; 
+    object-fit: cover; 
+}
+
+.item p {
+    margin: 6px 0px;
+}
+
+.item-prices {
+    gap: 20px;
+}
+
+.item-prices-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item:hover {
+    transform: scale(0.95);
+    border: 1px solid red;
+}
