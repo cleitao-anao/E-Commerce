@@ -104,3 +104,79 @@
 .profile-cart .icon {
     margin-left: 10px; /* Espacamento entre os ícones de perfil e carrinho */
 }
+
+/* Estilos comuns para botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo do botão "Esvaziar Carrinho" */
+  .clear-cart {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .clear-cart:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Estilo do botão "Sair" */
+  .logout-button {
+    background-color: #2ecc71; /* Cor verde */
+    color: white;
+  }
+  
+  .logout-button:hover {
+    background-color: #27ae60; /* Tom de verde mais escuro */
+  }
+  
+  /* Estilo do botão "Adicionar Item" */
+  .add-item-button {
+    background-color: #3498db; /* Cor azul */
+    color: white;
+  }
+  
+  .add-item-button:hover {
+    background-color: #2980b9; /* Tom de azul mais escuro */
+  }
+
+  .produtos-exibidos {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .produto {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .produto img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .produto h4 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .produto p {
+    font-size: 14px;
+    color: green;
+  }
+  
+  
