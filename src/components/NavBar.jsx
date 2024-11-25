@@ -5,7 +5,7 @@ import carrinhoIcon from "../icons/carrinhos-de-compras.png"; // Ajuste o caminh
 
 import { useStore } from "../store"; // Certifique-se de ajustar o caminho
 
-function NavBar({ isAuthenticated, handleLogout }) {
+function NavBar({ isAuthenticated }) {
   const totalItems = useStore((state) => state.totalItems());
 
   return (

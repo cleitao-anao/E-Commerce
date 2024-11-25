@@ -5,8 +5,7 @@ import Mouse from './Popular/Mouse';
 import Teclados from './Popular/Teclados';
 
 
-function Home({ isAuthenticated }) {
-  const totalItems = useStore((state) => state.totalItems());
+function Home() {
   const catalogProducts = useStore((state) => state.catalogProducts); // Acessa os produtos do catálogo
   const removeProduct = useStore((state) => state.removeProduct); // Função para remover produto do catálogo
 
