@@ -3,6 +3,22 @@
     flex-wrap: wrap;
     justify-content: center; 
     gap: 30px; 
+    padding: 20px;
+}
+
+.titulocomerce{
+    color: #D7DBE4;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.descricao{
+    color: #D7DBE4;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .popular-item {
@@ -10,25 +26,41 @@
     flex-wrap: wrap; 
     justify-content: space-around;
     width: 100%;
+    padding: 20px;
 }
 
 .item {
     width: 30%; 
     margin-bottom: 20px; 
     box-sizing: border-box; 
+    border-radius: 10px;
+    height: 400px;
+    align-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .item img {
     width: 100%; 
-    object-fit: cover; 
+    object-fit: cover;
+    margin-top: 30px; 
+    border-radius: 10px;
+    align-content: center;
+    max-width:400px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+    margin-left: 50px;
 }
 
 .item p {
     margin: 6px 0px;
+    font-size: 16px;
 }
 
 .item-prices {
     gap: 20px;
+    margin-top: 10px;
 }
 
 .item-prices-new {
@@ -39,5 +71,29 @@
 
 .item:hover {
     transform: scale(0.95);
-    border: 1px solid red;
+    border: 1px solid rgb(60, 0, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.titlearea {
+    text-align: center;
+    font-size: 18px;
+    word-wrap: normal;
+    background-position-x: left;
+    background-position-y: center;
+    background-position: 3px 4px;
+    border-top: 3px solid #D7DBE4;
+    border-bottom: 3px solid #D7DBE4;
+    margin: 18px 0;
+    height: 45px;
+    line-height: 40px;
+    clear: both;
+    color: #D7DBE4;
+}
+
+.area{
+    color:#1A1E4D;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
 }

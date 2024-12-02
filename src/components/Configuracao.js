@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './configuracao.css';
 
 const Configuracoes = ({ onLogout }) => {
   const navigate = useNavigate();
@@ -44,14 +45,8 @@ const Configuracoes = ({ onLogout }) => {
       </section>
 
       <section>
-        <h2><i className="bi bi-gear"></i>Configurações</h2>
-        <hr />
-      </section>
-
-      <section>
-        <button onClick={handleLogout} className="logout-button">Sair</button>
-        <p>Desconecte da sua conta!</p>
-        <hr />
+        <h2><i className=" bi bi-box-arrow-right"></i>Logout</h2>
+        <button className="logout-button" onClick={handleLogout}>Sair</button>
       </section>
     </div>
   );

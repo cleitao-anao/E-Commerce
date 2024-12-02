@@ -1,28 +1,34 @@
+// src/components/NavBar.jsx
+
 import React from "react";
-import { Link } from "react-router-dom"; // Importe o Link do React Router
-import perfilIcon from "../icons/perfil.png"; // Ajuste o caminho conforme necessário
-import carrinhoIcon from "../icons/carrinhos-de-compras.png"; // Ajuste o caminho conforme necessário
+import { Link } from "react-router-dom"; 
+import perfilIcon from "../icons/perfil.png"; 
+import carrinhoIcon from "../icons/carrinhos-de-compras.png"; 
+import image from "./image.png";
+import { useStore } from "../store"; 
 
-import { useStore } from "../store"; // Certifique-se de ajustar o caminho
-
-function NavBar({ isAuthenticated }) {
+function NavBar({ isAuthenticated, handleLogout }) {
   const totalItems = useStore((state) => state.totalItems());
 
   return (
     <header className="top-bar">
       <div className="left">
-        <h1>E-commerce</h1>
+        <Link to="/" className="logo">
+          <h1 className="titulo">LookPixel</h1>
+          <img src={image} alt="Descrição da imagem" className="logoDino" style={{ marginLeft: '10px', height: '40px' }} /> {/* Ajuste a altura conforme necessário */}
+        </Link>
       </div>
 
       <div className="center">
         <input type="text" placeholder="Pesquisar produtos..." />
         <div className="filter-dropdown">
           <button className="filter-button">Categorias</button>
+          <span className="caret"></span>
           <div className="dropdown-content">
-            <a href="#">Shop</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Kids</a>
+            <a href="#">Headsets</a>
+            <a href="#">Mouses</a>
+            <a href="#">Teclados</a>
+            <a href="#">Peças</a>
           </div>
         </div>
       </div>

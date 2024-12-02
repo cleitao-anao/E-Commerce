@@ -5,6 +5,7 @@ let mouse_product = [
       name:"Mouse Gamer Para Jogo 3.200 Dpi Óptico Com Led Rgb Usb Exbom",
       image: mouse_1,
       new_price:200.00,
+      new_discount:-60,
       
     },
 

@@ -1,0 +1,75 @@
+.bloco{
+    background-color: #1a1e4d65;
+    margin: auto;
+    width: 400px;
+    height: 350px;
+    margin-top: 100px;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    box-shadow: 0px 0px 8px #D7DBE4 ;
+}
+
+.titulado{
+    text-align: center;
+    padding-top: 30px;
+    color: #D7DBE4;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+label{
+    color: #D7DBE4;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Roboto';
+}
+
+.email{
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 40px;
+    width: 300px;
+    background-color: rgba(137, 43, 226, 0.174);
+    border: solid 1px#D7DBE4;
+    text-align: center;
+    color: #D7DBE4;
+    font-family: 'Roboto';
+}
+
+.senha{
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 40px;
+    width: 300px;
+    background-color: rgba(137, 43, 226, 0.174);
+    border: solid 1px#D7DBE4;
+    text-align: center;
+    color: #D7DBE4;
+    font-family: 'Roboto';
+}
+
+.butao{
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 40px;
+    width: 320px;
+    background-color: #D7DBE4;
+    border: none;
+    margin-left: 50px;
+    cursor: pointer;
+    font-family: 'Roboto';
+}
+
+.butao:hover{
+        background-color:#006eff;
+        color: #D7DBE4;
+        border: none;
+        transform: scale(1.1);
+}
+
+.textinho{
+    margin-top: 10px;
+    margin-left: 80px;
+    color: #D7DBE4;
+    font-family: 'Roboto';
+}

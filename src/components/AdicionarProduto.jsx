@@ -1,91 +1,58 @@
 import React, { useState } from 'react';
-import { useStore } from '../store';
+import { useStore } from '../store'; // Use a store do Zustand
 
 const AdicionarProduto = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    new_price: '',
-    type: '',
-    image: '',
-  });
-
-  const addProduct = useStore((state) => state.addProduct);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const [productName, setProductName] = useState('');
+  const [productPrice, setProductPrice] = useState('');
+  const [productImage, setProductImage] = useState('https://picsum.photos/350/418');
+  const addProduct = useStore((state) => state.addProduct); 
+  const handleAddProduct = () => {
     const newProduct = {
-      id: Date.now(),
-      name: formData.name,
-      new_price: parseFloat(formData.new_price),
-      image: formData.image || 'default_image.png',
+      id: Date.now(), 
+      name: productName,
+      new_price: parseFloat(productPrice),
+      image: productImage,
     };
 
-    if (!formData.type) {
-      alert('Selecione um tipo de produto.');
-      return;
-    }
+    addProduct(newProduct); 
 
-    addProduct(formData.type, newProduct);
-
-    alert('Produto adicionado com sucesso!');
-    setFormData({ name: '', new_price: '', type: '', image: '' });
+    setProductName('');
+    setProductPrice('');
+    setProductImage('https://picsum.photos/350/418');
   };
 
   return (
-    <div>
-      <h2>Adicionar Novo Produto</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="add-product-container">
+      <h1>Adicionar Produto</h1>
+      <form onSubmit={(e) => e.preventDefault()}>
         <div>
-          <label>Nome do Produto:</label>
+          <label>Nome do Produto</label>
           <input
             type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
+            value={productName}
+            onChange={(e) => setProductName(e.target.value)}
             required
           />
         </div>
         <div>
-          <label>Preço:</label>
+          <label>Preço do Produto</label>
           <input
             type="number"
-            name="new_price"
-            value={formData.new_price}
-            onChange={handleInputChange}
+            value={productPrice}
+            onChange={(e) => setProductPrice(e.target.value)}
             required
-            step="0.01"
           />
         </div>
         <div>
-          <label>Tipo de Produto:</label>
-          <select
-            name="type"
-            value={formData.type}
-            onChange={handleInputChange}
-            required
-          >
-            <option value="">Selecione o tipo</option>
-            <option value="teclado">Teclado</option>
-            <option value="mouse">Mouse</option>
-            <option value="headset">Headset</option>
-          </select>
-        </div>
-        <div>
-          <label>URL da Imagem (opcional):</label>
+          <label>Imagem do Produto (URL)</label>
           <input
-            type="text"
-            name="image"
-            value={formData.image}
-            onChange={handleInputChange}
+            type="url"
+            value={productImage}
+            onChange={(e) => setProductImage(e.target.value)}
+            required
           />
         </div>
-        <button type="submit">Adicionar Produto</button>
+        <button onClick={handleAddProduct}>Adicionar Produto</button>
       </form>
     </div>
   );

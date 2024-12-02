@@ -1,6 +1,7 @@
 // src/components/Login.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './conta.css'
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
@@ -30,33 +31,37 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div>
-      <h2>Página de Login</h2>
+    <div class='bloco'>
+      <h2 class='titulado'>Página de Login</h2>
       <form onSubmit={handleLogin}>
         <div>
           <label>Email:</label>
           <input
             type="email"
+            placeholder='Email...'
             value={email}
+            class='email'
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
         <div>
           <label>Senha:</label>
-          <input
+          <input 
             type="password"
+            class='senha'
             value={password}
+            placeholder='Senha...'
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit" disabled={loading}>
+        <button class='butao' type="submit" disabled={loading}>
           {loading ? 'Entrando...' : 'Entrar'}
         </button>
       </form>
-      <p>Não tem uma conta? <Link to="/register">Registre-se aqui!</Link></p>
+      <p class='textinho'>Não tem uma conta? <Link to="/register">Registre-se aqui!</Link></p>
     </div>
   );
 }

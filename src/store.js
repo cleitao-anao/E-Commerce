@@ -57,23 +57,22 @@ export const useStore = create((set, get) => ({
   // Calcular o preço total dos produtos no carrinho
   totalPrice: () => get().products.reduce((total, product) => total + product.new_price * product.quantity, 0),
 
-  headsetProducts: [],
-  tecladoProducts: [],
-  mouseProducts: [],
+  // Produtos do catálogo
+  catalogProducts: JSON.parse(localStorage.getItem('catalogProducts')) || [],
 
-  addProduct: (type, product) => {
+  // Adicionar um novo produto ao catálogo
+  addProduct: (product) =>
     set((state) => {
-      if (type === 'headset') {
-        return { headsetProducts: [...state.headsetProducts, product] };
-      } else if (type === 'teclado') {
-        return { tecladoProducts: [...state.tecladoProducts, product] };
-      } else if (type === 'mouse') {
-        return { mouseProducts: [...state.mouseProducts, product] };
-      }
-      return {};
-    });
-  },
+      const updatedCatalog = [...state.catalogProducts, product];
+      localStorage.setItem('catalogProducts', JSON.stringify(updatedCatalog));
+      return { catalogProducts: updatedCatalog };
+    }),
 
-
-
+  // Remover produto do catálogo
+  removeProduct: (productId) =>
+    set((state) => {
+      const updatedCatalog = state.catalogProducts.filter((product) => product.id !== productId);
+      localStorage.setItem('catalogProducts', JSON.stringify(updatedCatalog));
+      return { catalogProducts: updatedCatalog };
+    }),
 }));

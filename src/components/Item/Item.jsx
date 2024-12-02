@@ -1,9 +1,20 @@
 import React from 'react';
+import { useStore } from '../../store'; // Certifique-se de ajustar o caminho
 import './Item.css';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
- 
+  const addToCart = useStore((state) => state.addToCart);
+
+  const handleClick = () => {
+    addToCart({
+      id: props.id,
+      name: props.name,
+      price: props.new_price,
+      image: props.image,
+    });
+  };
+
   return (
     <div className='item'>
       {/* Corrigido o Link com interpolação de string */}

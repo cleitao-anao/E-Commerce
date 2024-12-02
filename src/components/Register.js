@@ -1,6 +1,7 @@
 // src/components/Register.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './conta.css';
 
 function Register({ onRegister }) {
   const [email, setEmail] = useState('');
@@ -28,28 +29,32 @@ function Register({ onRegister }) {
   };
 
   return (
-    <div>
-      <h2>Página de Registro</h2>
+    <div class='bloco'>
+      <h2 class='titulado'>Página de Registro</h2>
       <form onSubmit={handleRegister}>
         <div>
           <label>Email:</label>
           <input 
+            class='email'
             type="email" 
             value={email} 
+            placeholder='Email...'
             onChange={(e) => setEmail(e.target.value)} 
             required 
           />
         </div>
         <div>
           <label>Senha:</label>
-          <input 
+          <input
+            class='senha' 
             type="password" 
             value={password} 
+            placeholder='Senha...'
             onChange={(e) => setPassword(e.target.value)} 
             required 
           />
         </div>
-        <button type="submit">Registrar</button>
+        <button class='butao' type="submit">Registrar</button>
       </form>
     </div>
   );

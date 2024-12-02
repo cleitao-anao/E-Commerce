@@ -6,6 +6,7 @@ let teclados_product = [
       name:"Teclado Gamer Redragon Mecânico Mitra com Anti-Ghost K551 ABNT2",
       image: teclado_1,
       new_price:80.00,
+      new_discount:-40,
       
     },
 

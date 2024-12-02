@@ -8,18 +8,21 @@ let all_product = [
     name:"headset redragon zeus x wireless",
     image:headset_1,
     new_price:400.00,
+    new_discount:-100,
   
     },
     {id:2,
       name:"Mouse Gamer Para Jogo 3.200 Dpi Óptico Com Led Rgb Usb Exbom",
       image: mouse_1,
       new_price:200.00,
+      new_discount:-60,
       
     },
     {id:3,
       name:"Teclado Gamer Redragon Mecânico Mitra com Anti-Ghost K551 ABNT2",
       image:teclado_1,
       new_price:80.00,
+      new_discount:-40,
       
     },
   ];

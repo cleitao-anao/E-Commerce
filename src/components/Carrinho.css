@@ -1,28 +1,35 @@
-/* Estilo para o container principal do carrinho */
 .cart-container {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   font-family: Arial, sans-serif;
+  background-color: #1a1e4d65;
+  height: 350px;
+  margin-top: 100px;
+  box-shadow: 0px 0px 8px #D7DBE4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
 }
 
-/* Título do carrinho */
 .cart-container h1 {
   font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 0;
 }
 
-/* Lista de itens */
 .cart-container ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .cart-container li {
@@ -31,13 +38,18 @@
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.cart-container li:hover {
+  background-color: #2f3640;
 }
 
 .cart-container li:last-child {
   border-bottom: none;
 }
 
-/* Estilo para as imagens dos produtos */
 .cart-container img {
   width: 60px;
   height: 60px;
@@ -46,7 +58,6 @@
   margin-right: 20px;
 }
 
-/* Botões de ação */
 .cart-container button {
   background-color: #007bff;
   color: white;
@@ -56,16 +67,17 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: 5px;
+  font-size: 16px;
 }
 
 .cart-container button:hover {
   background-color: #0056b3;
 }
 
-/* Total e esvaziar carrinho */
 .cart-container p {
   margin: 10px 0;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .cart-container .clear-cart {
@@ -73,15 +85,16 @@
   width: 100%;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #ff4d4d;
+  background-color: #e030ff;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
+  font-size: 18px;
 }
 
 .cart-container .clear-cart:hover {
-  background-color: #e60000;
+  background-color: #8d09b2;
 }

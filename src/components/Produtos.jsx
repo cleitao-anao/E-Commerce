@@ -24,6 +24,7 @@ const Produtos = () => {
       <h1>{produto.name}</h1>
       <img src={produto.image} alt={produto.name} />
       <p>Preço: R${produto.new_price}</p>
+      <p2>discount: R${produto.new_discount}</p2>
       <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
     </div>
   );
