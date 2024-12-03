@@ -228,6 +228,9 @@ body{
 .logo {
     text-decoration: none; /* Remove underline */
     color: white; /* Cor do texto da logo */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo:hover {
@@ -331,3 +334,75 @@ body{
 }
 
 
+/*  */
+/*  */
+/*  */
+/* produto.css */
+
+/* Escopo para a página do produto */
+.produto-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .produto-container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .produto-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .produto-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .produto-container p2 {
+    font-size: 1em;
+    color: #888;
+    margin: 10px 0;
+    display: block;
+  }
+  
+  .produto-container button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #006EFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .produto-container button:hover {
+    background-color: #006eff7a;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .produto-container {
+      padding: 10px;
+    }
+  
+    .produto-container h1 {
+      font-size: 2em;
+    }
+  
+    .produto-container button {
+      font-size: 1em;
+      padding: 8px 15px;
+    }
+  }
+  

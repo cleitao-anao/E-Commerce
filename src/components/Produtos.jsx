@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Context } from '../context/Context';
 import { useParams } from 'react-router-dom';
-import { useStore } from '../store'; // Importa a store do Zustand
+import { useStore } from '../store'; 
+import '../assets/css/produto.css';
 
 const Produtos = () => {
   const { all_product } = useContext(Context);
@@ -20,7 +21,7 @@ const Produtos = () => {
   };
 
   return (
-    <div>
+    <div  className="produto-container">
       <h1>{produto.name}</h1>
       <img src={produto.image} alt={produto.name} />
       <p>Preço: R${produto.new_price}</p>
